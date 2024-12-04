@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Новогодние пожелания</title>
+  </head>
+  <body>
+    <iframe name="hiddenFrame" style="display: none"></iframe>
+
+    <form
+      action="https://localhost:3000"
+      method="POST"
+      autocomplete="off"
+      target="hiddenFrame"
+    >
+      <div>
+        <p>✨ Ваше имя</p>
+        <input
+          name="username"
+          type="text"
+          placeholder="Введите ваше имя"
+          required
+          minlength="2"
+        />
+
+        <p>✨ Какая фича 2024 года запомнилась вам больше всего?</p>
+        <input
+          name="feature2024"
+          type="text"
+          placeholder="Расскажите, что вас впечатлило"
+        />
+
+        <p>☕ Что бы вы подарили бэкендеру?</p>
+        <select name="frontend_gift">
+          <option value="1">Документация (наконец-то)</option>
+          <option value="2">Инструмент для отладки</option>
+          <option value="3">Бесконечный запас кофе</option>
+        </select>
+
+        <p>🎨 Что бы вы подарили фронтендеру?</p>
+        <select name="backend_gift">
+          <option value="1">Новый фреймворк (ещё один)</option>
+          <option value="2">Исправления для старых браузеров</option>
+          <option value="3">Хорошо продуманную дизайн-систему</option>
+        </select>
+
+        <p>🎁 Ваше новогоднее пожелание разработчикам:</p>
+        <textarea
+          name="wish"
+          placeholder="Напишите что-нибудь тёплое..."
+          required
+        ></textarea>
+      </div>
+
+      <button type="submit">🎅 Отправить письмо Деду Морозу</button>
+    </form>
+  </body>
+</html>
